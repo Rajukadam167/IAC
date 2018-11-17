@@ -6022,3 +6022,7 @@ At line:1 char:15
     + CategoryInfo          : ObjectNotFound: (-DisplayName:String) [], CommandNotFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
 
+**********************
+Windows PowerShell transcript end
+End time: 20181027161501
+**********************

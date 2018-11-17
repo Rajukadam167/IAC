@@ -1,0 +1,184 @@
+import- .\comp.txt
+Get-Process
+
+
+$compsa=Get-Content -path e:\raju\comp.txt
+
+foreach ($comp in $compsa)
+
+{
+
+"= = = = = = = = = = " | Out-File E:\raju\comput.txt -Append
+
+"fetching details from $comp" | Out-File E:\raju\comput.txt -Append
+
+
+ Get-process -ComputerName $comp | Out-File E:\raju\comput.txt -Append
+
+}
+
+Get-Process -ComputerName DC
+
+Get-Member -InputObject $compsa
+
+
+
+$compsa=Get-Content -path e:\raju\comp.txt
+
+$start=0
+$end=$compsa.Length
+
+
+
+
+$start=65
+$end=90
+
+for ($start;$start -le $end ; $start++)
+
+{
+ $([char]$start).ToString().ToLower() 
+ }
+
+
+
+
+import- .\comp.txt
+Get-Process
+
+
+$compsa=Get-Content -path e:\raju\comp.txt
+
+foreach ($comp in $compsa)
+
+{
+
+"= = = = = = = = = = " | Out-File E:\raju\comput.txt -Append
+
+"fetching details from $comp" | Out-File E:\raju\comput.txt -Append
+
+
+ Get-process -ComputerName $comp | Out-File E:\raju\comput.txt -Append
+
+}
+
+Get-Process -ComputerName DC
+
+Get-Member -InputObject $compsa
+
+
+
+$compsa=Get-Content -path e:\raju\comp.txt
+
+$start=0
+$end=$compsa.Length
+
+
+
+
+$start=65
+$end=90
+
+for ($start;$start -le $end ; $start++)
+
+{
+ $([char]$start).ToString().ToLower() 
+ }
+
+----------------------------------
+
+
+ $Services=Get-Service
+
+
+ foreach ($Service in $Services)
+{
+Write-Host "The Display Name of $($service.name) is $($service.displayname)"
+}
+
+
+$Process=Get-Process
+
+
+ foreach ($proc in $Process)
+{
+Write-Host "The ID of process of $($proc.name) is $($proc.ID)"
+}
+
+
+import- .\comp.txt
+Get-Process
+
+
+$compsa=Get-Content -path e:\raju\comp.txt
+
+foreach ($comp in $compsa)
+
+{
+
+"= = = = = = = = = = " | Out-File E:\raju\comput.txt -Append
+
+"fetching details from $comp" | Out-File E:\raju\comput.txt -Append
+
+
+ Get-process -ComputerName $comp | Out-File E:\raju\comput.txt -Append
+
+}
+
+Get-Process -ComputerName DC
+
+Get-Member -InputObject $compsa
+
+
+
+$compsa=Get-Content -path e:\raju\comp.txt
+
+$start=0
+$end=$compsa.Length
+
+
+
+
+$start=65
+$end=90
+
+for ($start;$start -le $end ; $start++)
+
+{
+ $([char]$start).ToString().ToLower() 
+ }
+
+----------------------------------
+
+
+ $Services=Get-Service
+
+
+ foreach ($Service in $Services)
+{
+Write-Host "The Display Name of $($service.name) is $($service.displayname)"
+}
+
+
+$Process=Get-Process
+
+
+ foreach ($proc in $Process)
+{
+Write-Host "The ID of process of $($proc.name) is $($proc.ID)"
+}
+
+UserIDs=Import-Csv .\testid.csv
+
+$logs=Get-childItem -Path e:\raju\test\*.log
+Remove-childItem
+
+
+for ($i=1;$i -le9; $i++)
+{ 
+New-Item -ItemType file -Path e:\raju\test\$i.log
+
+}
+
+
+Get-ChildItem E:\raju\test\ -Include *.log | Remove-Item

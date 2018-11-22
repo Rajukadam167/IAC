@@ -1,0 +1,78 @@
+﻿Task--2
+1.
+
+PS C:\Users\rajekada> Get-Service | Export-Csv services.csv | outfile
+outfile : The term 'outfile' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:41
++ Get-Service | Export-Csv services.csv | outfile
++                                         ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (outfile:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+outfile : The term 'outfile' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:41
++ Get-Service | Export-Csv services.csv | outfile
++                                         ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (outfile:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+==========================++++++++++++++++++++++++++++++++++=====================++++++++++++++++++=====================
+
+2
+
+PS C:\Users\rajekada> Get-Service | Export-Csv -Path sevicedelim.csv -Delimiter "|"  -NoTypeInformation
+
+Output file attached
+
+============================================+++++++++++++++++++++=======================+++++++++++++++====================
+Task--3
+1
+PS C:\Users\rajekada> $start=0
+
+	$end=$compsa.Length
+
+	$start=65
+
+	$end=90
+
+	for ($start;$start -le $end ; $start++)
+
+	{
+
+	 $([char]$start).ToString().ToUpper() 
+
+	 }
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+=============================================+++++++++++++++++====================+++++++++++++====================
+
+2
+Outpufile attached services.csv
+
+============================================+++++++++++++++++++++=======================++++++++++++======================

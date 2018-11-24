@@ -1,0 +1,414 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20181124120341
+Username: NTMS_PC8\Administrator
+RunAs User: NTMS_PC8\Administrator
+Machine: NTMS_PC8 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 4340
+**********************
+Transcript started, output file is 24-no-2018.txt
+
+PS C:\Users\Administrator> ise
+
+
+
+$Services=Get-Service
+
+foreach ($service in $Services)
+{
+  $service.StartType
+
+if($Service.StartType -eq "Automatic")
+
+{
+Write-Host "This $($service.name) startup Type is automatic"
+
+}
+
+elseif($Service.StartType -eq "Manual")
+
+{
+Write-Host "This $($Service.name) startup Type is Manual"
+
+}
+
+
+if($Service.StartupType -eq "Disabled")
+
+{
+Write-Host "This $($service.name) startup Type is Disabled"
+
+}
+
+}
+PS C:\Users\Administrator> Get-service | Get-Member
+
+
+   TypeName: System.ServiceProcess.ServiceController
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+Name                      AliasProperty Name = ServiceName
+RequiredServices          AliasProperty RequiredServices = ServicesDependedOn
+Disposed                  Event         System.EventHandler Disposed(System.Object, System.EventArgs)
+Close                     Method        void Close()
+Continue                  Method        void Continue()
+CreateObjRef              Method        System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+ExecuteCommand            Method        void ExecuteCommand(int command)
+GetHashCode               Method        int GetHashCode()
+GetLifetimeService        Method        System.Object GetLifetimeService()
+GetType                   Method        type GetType()
+InitializeLifetimeService Method        System.Object InitializeLifetimeService()
+Pause                     Method        void Pause()
+Refresh                   Method        void Refresh()
+Start                     Method        void Start(), void Start(string[] args)
+Stop                      Method        void Stop()
+WaitForStatus             Method        void WaitForStatus(System.ServiceProcess.ServiceControllerStatus desiredStat...
+CanPauseAndContinue       Property      bool CanPauseAndContinue {get;}
+CanShutdown               Property      bool CanShutdown {get;}
+CanStop                   Property      bool CanStop {get;}
+Container                 Property      System.ComponentModel.IContainer Container {get;}
+DependentServices         Property      System.ServiceProcess.ServiceController[] DependentServices {get;}
+DisplayName               Property      string DisplayName {get;set;}
+MachineName               Property      string MachineName {get;set;}
+ServiceHandle             Property      System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}
+ServiceName               Property      string ServiceName {get;set;}
+ServicesDependedOn        Property      System.ServiceProcess.ServiceController[] ServicesDependedOn {get;}
+ServiceType               Property      System.ServiceProcess.ServiceType ServiceType {get;}
+Site                      Property      System.ComponentModel.ISite Site {get;set;}
+StartType                 Property      System.ServiceProcess.ServiceStartMode StartType {get;}
+Status                    Property      System.ServiceProcess.ServiceControllerStatus Status {get;}
+ToString                  ScriptMethod  System.Object ToString();
+
+
+
+PS C:\Users\Administrator> Get-help about_regular* -ShowWindow
+
+PS C:\Users\Administrator> 1 -match "[0-31]"
+True
+
+PS C:\Users\Administrator> 32 -match "[0-31]"
+True
+
+PS C:\Users\Administrator> 32 -match "[1-31]"
+True
+
+PS C:\Users\Administrator> 32 -match "[2-31]"
+True
+
+PS C:\Users\Administrator> 32 -match "[3-31]"
+True
+
+PS C:\Users\Administrator> 42 -match "[3-31]"
+False
+
+PS C:\Users\Administrator> 42 -match "[1-31]"
+True
+
+PS C:\Users\Administrator> 32 -match "[3-31]"
+True
+
+PS C:\Users\Administrator> 32 -match "^[1-31]$"
+False
+
+PS C:\Users\Administrator> Get-help about_regular* -ShowWindow
+
+PS C:\Users\Administrator> 32 -match "[0,2]"
+True
+
+PS C:\Users\Administrator> 32 -match "^[3-31]$"
+False
+
+PS C:\Users\Administrator> 30 -match "^[3-30]$"
+False
+
+PS C:\Users\Administrator> 30 -match "^[1-30]$"
+False
+
+PS C:\Users\Administrator> a -match [a-z] 
+a : The term 'a' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ a -match [a-z]
++ ~
+    + CategoryInfo          : ObjectNotFound: (a:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+PS C:\Users\Administrator> a -match "[a-z]" 
+a : The term 'a' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ a -match "[a-z]"
++ ~
+    + CategoryInfo          : ObjectNotFound: (a:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+PS C:\Users\Administrator> "a" -match "[a-z]" 
+True
+
+PS C:\Users\Administrator> "z" -match "[a-p]" 
+False
+
+PS C:\Users\Administrator> $psversion table
+At line:1 char:12
++ $psversion table
++            ~~~~~
+Unexpected token 'table' in expression or statement.
+At line:1 char:12
++ $psversion table
++            ~~~~~
+Unexpected token 'table' in expression or statement.
+
+
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+
+PS C:\Users\Administrator> $PSVersionTabletable
+
+PS C:\Users\Administrator> $PSVersionTabletable
+
+PS C:\Users\Administrator> $PSVersionTable
+
+Name                           Value
+----                           -----
+PSVersion                      4.0
+WSManStackVersion              3.0
+SerializationVersion           1.1.0.1
+CLRVersion                     4.0.30319.42000
+BuildVersion                   6.3.9600.18968
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0}
+PSRemotingProtocolVersion      2.2
+
+========================+++++++++++++++++++++++++================================
+
+
+
+
+
+
+
+$a=$true
+
+while($a)
+
+{$xinput=Read-Host
+
+if ($xinput-match "^[a-z]{3}\-[a-z]{2}\-[a-z]{1}$")
+
+
+
+{ Write-Host "This is correct value" -ForegroundColor Yellow
+
+$a=$false}
+
+else 
+
+{ 
+Write-Host "This is wrong value" -ForegroundColor Red
+}
+}
+
+
+
++++++++++++++++++=========================+++++++++++++++++++++++======================
+
+
+$Services=Get-Service
+
+foreach ($service in $Services)
+
+
+    switch($service.StartType)
+
+            {"Automatic"{$info=$(service.name) "start type Automatic"}
+
+
+        }
+
+        
+        {"Manual"{$info=This $(service.name) "start type is Manual"
+
+        }
+
+        
+        {
+        "Disabled"{$info="start type is Disabled"
+
+        }
+
+        }
+        
+
+        $info | Export-Csv service.csv -Append
+ 
+
+========================++++++++++++++++===============================
+
+
+
+
+
+PS C:\Users\Administrator> Get-Help Get-Member
+
+NAME
+    Get-Member
+
+SYNOPSIS
+    Gets the properties and methods of objects.
+
+
+SYNTAX
+    Get-Member [[-Name] <String[]>] [-Force] [-InputObject <PSObject>] [-MemberType <PSMemberTypes>] [-Static] [-View
+    <PSMemberViewTypes>] [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-Member cmdlet gets the "members" (properties and methods) of objects.
+
+    To specify the object, use the InputObject parameter or pipe an object to Get-Member. To retrieve information
+    about static members (members of the class, not of the instance), use the Static parameter. To get only certain
+    types of members, such as NoteProperties, use the MemberType parameter.
+
+
+RELATED LINKS
+    Online Version: http://go.microsoft.com/fwlink/p/?linkid=293971
+    Add-Member
+    Get-Command
+    Get-Help
+    Get-PSDrive
+    about_Automatic_Variables
+    about_Properties
+    about_Methods
+    about_Objects
+
+REMARKS
+    To see the examples, type: "get-help Get-Member -examples".
+    For more information, type: "get-help Get-Member -detailed".
+    For technical information, type: "get-help Get-Member -full".
+    For online help, type: "get-help Get-Member -online"
+
+
+$azurevm=new-object system.object
+
+$azurevm | Add-Member -MemberType NoteProperty -Name "xyz" -Value "7898"
+
+$azurevm | Add-Member -MemberType NoteProperty -Name "xyz" -status "running"
+
+
+$Users.name="raju"
+
+$Users=new-object system.object
+
+$Users | Add-Member -MemberType NoteProperty -Name "fname" -Value "Raju" 
+$Users | Add-Member -MemberType NoteProperty -Name "lname" -Value "Kadam"
+$Users | Add-Member -MemberType ScriptMethod -Name "SamAccoutname" -Value {"$($($this.fname).substring(0,1))"+"$($this.lname)"}
+
+$Users=@()
+$aduser.fname="raj"
+$aduser.lname="Kadam"
+$users+$aduser
+$aduser.fname="ra"
+$aduser.lname="Kadam"
+$users+$aduser
+
+
+
+
+$a=$true
+
+while($a)
+
+{$xinput=Read-Host
+
+if ($xinput-match "^[a-z]{3}\-[a-z]{2}\-[a-z]{1}$")
+
+
+
+{ Write-Host "This is correct value" -ForegroundColor Yellow
+
+$a=$false}
+
+else 
+
+{ 
+Write-Host "This is wrong value" -ForegroundColor Red
+}
+}
+
+
+
+
+
+
+$Services=Get-Service
+
+foreach ($service in $Services)
+
+
+    switch($service.StartType)
+
+            {"Automatic"{$info=$(service.name) "start type Automatic"}
+
+
+        }
+
+        
+        {"Manual"{$info=This $(service.name) "start type is Manual"
+
+        }
+
+        
+        {
+        "Disabled"{$info="start type is Disabled"
+
+        }
+
+        }
+        
+
+        $info | Export-Csv service.csv -Append
+ 
+
+
+
+
+
+$Services=Get-Service
+
+foreach ($service in $Services)
+{
+  $service.StartType
+
+if($Service.StartType -eq "Automatic")
+
+{
+Write-Host "This $($service.name) startup Type is automatic"
+
+}
+
+elseif($Service.StartType -eq "Manual")
+
+{
+Write-Host "This $($Service.name) startup Type is Manual"
+
+}
+
+
+if($Service.StartupType -eq "Disabled")
+
+{
+Write-Host "This $($service.name) startup Type is Disabled"
+
+}
+
+}
+
+
+
+

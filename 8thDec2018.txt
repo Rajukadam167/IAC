@@ -1,0 +1,159 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20181208122421
+Username: NTMS_PC8\Administrator
+RunAs User: NTMS_PC8\Administrator
+Machine: NTMS_PC8 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 4984
+**********************
+Transcript started, output file is 8thDec2018.txt
+
+PS E:\raju> ps-remoting
+ps-remoting : The term 'ps-remoting' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ps-remoting
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ps-remoting:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+PS E:\raju> Enable-PSRemoting
+WinRM Quick Configuration
+Running command "Set-WSManQuickConfig" to enable remote management of this computer by using the Windows Remote Management (WinRM) service.
+ This includes:
+    1. Starting or restarting (if already started) the WinRM service
+    2. Setting the WinRM service startup type to Automatic
+    3. Creating a listener to accept requests on any IP address
+    4. Enabling Windows Firewall inbound rule exceptions for WS-Management traffic (for http only).
+
+Do you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+A
+
+WinRM service type changed successfully.
+WinRM service started.
+
+
+PS E:\raju> TerminatingError(Set-WSManQuickConfig): "<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>"
+>> TerminatingError(Set-WSManQuickConfig): "<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>"
+>> TerminatingError(Set-WSManQuickConfig): "<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>"
+>> TerminatingError(Set-WSManQuickConfig): "<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>"
+>> TerminatingError(Set-WSManQuickConfig): "<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>"
+>> TerminatingError(Set-WSManQuickConfig): "<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>"
+<f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="localhost"><f:Message><f:ProviderFault provider="Config provider" path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>
+Set-WSManQuickConfig : <f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault" Code="2150859113"
+Machine="localhost"><f:Message><f:ProviderFault provider="Config provider"
+path="%systemroot%\system32\WsmSvc.dll"><f:WSManFault xmlns:f="http://schemas.microsoft.com/wbem/wsman/1/wsmanfault"
+Code="2150859113" Machine="NTMS_PC8"><f:Message>WinRM firewall exception will not work since one of the network
+connection types on this machine is set to Public. Change the network connection type to either Domain or Private and
+try again. </f:Message></f:WSManFault></f:ProviderFault></f:Message></f:WSManFault>
+At line:69 char:17
++                 Set-WSManQuickConfig -force
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Set-WSManQuickConfig], InvalidOperationException
+    + FullyQualifiedErrorId : WsManError,Microsoft.WSMan.Management.SetWSManQuickConfigCommand
+
+
+PS E:\raju> Enter-PSSession desktop-sivomti
+Enter-PSSession : Connecting to remote server desktop-sivomti failed with the following error message : The WinRM
+client cannot process the request. If the authentication scheme is different from Kerberos, or if the client computer
+is not joined to a domain, then HTTPS transport must be used or the destination machine must be added to the
+TrustedHosts configuration setting. Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts
+list might not be authenticated. You can get more information about that by running the following command: winrm help
+config. For more information, see the about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession desktop-sivomti
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (desktop-sivomti:String) [Enter-PSSession], PSRemotingTransportExceptio
+   n
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+
+
+PS E:\raju> Enter-PSSession -ComputerName desktop-sivomti
+Enter-PSSession : Connecting to remote server desktop-sivomti failed with the following error message : The WinRM
+client cannot process the request. If the authentication scheme is different from Kerberos, or if the client computer
+is not joined to a domain, then HTTPS transport must be used or the destination machine must be added to the
+TrustedHosts configuration setting. Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts
+list might not be authenticated. You can get more information about that by running the following command: winrm help
+config. For more information, see the about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName desktop-sivomti
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (desktop-sivomti:String) [Enter-PSSession], PSRemotingTransportExceptio
+   n
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+
+
+class VM
+{
+    $Name
+
+    [string]status()
+            { return "stopped"
+            }
+            
+            } 
+
+$crd=Get-Credential
+Enter-PSSession -ComputerName desktop-sivomti -Credential $crd
+Enable-PSRemoting -Verbose
+$comp=($env:COMPUTERNAME)
+Help New-SelfSignedCertificate
+New-SelfSignedCertificate -CertStoreLocation Cert:\localmachine\My -DnsName $comp
+Get-PSProvider
+c:
+cd 
+New-Item -path WSMan:\localhost\Listener -Transport HTTPS -Address * -CertificateThumbPrint "04464FC8AB2930053E4E435F421AE3A8CE71D301"
+
+Set-Item -Path wsman:\localhost\client\trustedhosts -Value "1.1.1.1" -Concatenate 
+Enter-PSSession -ComputerName desktop-sivtm
+$pss=New-PSSessionOption -SkipCACheck
+Enter-PSSession -SessionOption $pss -ComputerName Desktop-sivomti -Credential $crd -UseSSL -Port 5986
+Invoke-Command -SessionOption $pss -ComputerName Desktop-sivomti -Credential $crd -UseSSL -Port 5986 -ScriptBlock {Get-Service}
+
+
+class VM
+{
+    $Name
+
+    [string]status()
+            { return "stopped"
+            }
+            
+            } 
+
+$crd=Get-Credential
+Enter-PSSession -ComputerName desktop-sivomti -Credential $crd
+Enable-PSRemoting -Verbose
+$comp=($env:COMPUTERNAME)
+Help New-SelfSignedCertificate
+New-SelfSignedCertificate -CertStoreLocation Cert:\localmachine\My -DnsName $comp
+Get-PSProvider
+c:
+cd 
+New-Item -path WSMan:\localhost\Listener -Transport HTTPS -Address * -CertificateThumbPrint "04464FC8AB2930053E4E435F421AE3A8CE71D301"
+
+Set-Item -Path wsman:\localhost\client\trustedhosts -Value "1.1.1.1" -Concatenate 
+Enter-PSSession -ComputerName desktop-sivtm
+$pss=New-PSSessionOption -SkipCACheck
+Enter-PSSession -SessionOption $pss -ComputerName Desktop-sivomti -Credential $crd -UseSSL -Port 5986
+Invoke-Command -SessionOption $pss -ComputerName Desktop-sivomti -Credential $crd -UseSSL -Port 5986 -ScriptBlock {Get-Service}
+Invoke-Command -SessionOption $pss -ComputerName Desktop-sivomti -Credential $crd -UseSSL -Port 5986
+
+Get-Service
+
+$pss=New-PSSessionOption -SkipCACheck
+New-PSSession -ComputerName Desktop-sivomti -Port 5986 -Credential $crd -UseSSL -SessionOption $pss
+Get-PSSession -Id 17 | Enter-PSSession
+Get-Service
+$service=get-service
+$servicename="BITS"
+$pssession=New-PSSession -ComputerName Desktop-sivomti -Port 5986 -Credential $crd -UseSSL -SessionOption $pss
+Invoke-Command -Session $pssession -ArgumentList $servicename -ScriptBlock {Get-Service -Name $Args[0]}
+
+
+
+
+
